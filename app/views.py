@@ -5,12 +5,8 @@ from app.webhook import respond
 
 app = Flask(__name__)
 
+
 @app.route('/')
-def test():
-    return 'Hello World'
-
-
-@app.route('tt')
 def index():
     return render_template("/templates/index.html")
 
