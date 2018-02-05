@@ -11,8 +11,9 @@ def get_rhyme_words(word):
     tail_request = "rel_rhy=" + word
     final_request = apiAddress + tail_request
     rhyme_words = json.loads(requests.get(final_request).text)
+    print(rhyme_words)
     for wordDict in rhyme_words:
-        final_words.append([wordDict['word'], wordDict['score'], wordDict['numSyllables']])
+        final_words.append([wordDict['word'], wordDict.get('score', 0), wordDict['numSyllables']])
 
     return final_words
 
@@ -36,4 +37,9 @@ def get_best_word(word_list):
             cur_best_score = cur_score
             cur_best_word_index = i
 
-    return word_list[cur_best_word_index][0]
+    coolWord = word_list[cur_best_word_index][0]
+    print('the word being chosen is "' + coolWord + '", with a score of ' + str(cur_best_score))
+    return coolWord
+
+
+print(get_best_word(get_rhyme_words('father')))
