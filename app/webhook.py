@@ -17,3 +17,6 @@ def make_fulfillment(word):
     """ returns a json str containing the repsonse text for dialogflow"""
     response_dict = {'fulfillmentText': word}
     return json.dumps(response_dict)
+
+
+print(make_fulfillment(get_best_word(get_rhyme_words('hello'))))
