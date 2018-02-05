@@ -12,6 +12,7 @@ def get_rhyme_words(word):
     tail_request = "rel_rhy=" + word
     final_request = apiAddress + tail_request
     rhyme_words = json.loads(requests.get(final_request).text)
+    print(rhyme_words)
     for wordDict in rhyme_words:
         final_words.append([wordDict['word'], wordDict['score'], wordDict['numSyllables']])
 
