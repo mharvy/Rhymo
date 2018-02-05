@@ -24,7 +24,7 @@ def word_rating(rating, num_syllables):
 
 # Returns the 'coolest' word
 def get_best_word(word_list):
-    if word_list.size == 0:
+    if len(word_list) == 0:
         return 'No rhyming words :('
     cur_best_score = word_rating(word_list[0][1], word_list[0][2])
     cur_best_word_index = 0
