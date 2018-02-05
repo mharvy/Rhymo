@@ -11,7 +11,6 @@ def index():
 @app.route('/webhook', methods=['POST'])
 def dialogflow_webhook():
     json_dict = request.get_json()
-    print(json_dict)
     return respond(json_dict)
 
 
