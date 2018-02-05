@@ -15,7 +15,7 @@ def get_rhyme_words(word):
     for wordDict in rhyme_words:
         final_words.append([wordDict['word'], wordDict['score'], wordDict['numSyllables']])
 
-    print(final_words + '\n')
+    print(final_words)
     return final_words
 
 
@@ -36,5 +36,5 @@ def get_best_word(word_list):
             cur_best_score = cur_score
             cur_best_word_index = i
 
-    print(word_list[cur_best_word_index][0] + '\n')
+    print(word_list[cur_best_word_index][0])
     return word_list[cur_best_word_index][0]
