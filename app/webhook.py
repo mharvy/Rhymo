@@ -12,6 +12,7 @@ def get_last_word(json_dict):
 
 def respond(json_dict):
     last_word = get_last_word(json_dict)
+    print('function respond says that last word is... : ')
     print('responding...')
     return make_fulfillment(get_best_word(get_rhyme_words(last_word)))
 

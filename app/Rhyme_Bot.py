@@ -39,3 +39,7 @@ def get_best_word(word_list):
 
     print(word_list[cur_best_word_index][0])
     return word_list[cur_best_word_index][0]
+
+
+print(get_rhyme_words('toad'))
+print(get_best_word(get_rhyme_words('toad')))
