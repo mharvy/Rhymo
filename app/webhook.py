@@ -10,10 +10,10 @@ def get_last_word(json_dict):
 
 def respond(json_dict):
     last_word = get_last_word(json_dict)
-    return get_best_word(last_word)
+    return make_fulfillment(get_best_word(last_word))
 
 
 def make_fulfillment(word):
     """ returns a json str containing the repsonse text for dialogflow"""
-    response_dict = {'fulfillmentText':word}
+    response_dict = {'fulfillmentText': word}
     return json.dumps(response_dict)
