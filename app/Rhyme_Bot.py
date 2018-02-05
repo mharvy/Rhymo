@@ -36,7 +36,3 @@ def get_best_word(word_list):
             cur_best_word_index = i
 
     return word_list[cur_best_word_index][0]
-
-
-pp(get_rhyme_words("hello"))
-pp(get_best_word(get_rhyme_words("hello")))

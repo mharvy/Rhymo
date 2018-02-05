@@ -1,4 +1,4 @@
-from app.Rhyme_Bot import get_best_word
+from app.Rhyme_Bot import get_best_word, get_rhyme_words
 import json
 
 
@@ -10,7 +10,7 @@ def get_last_word(json_dict):
 
 def respond(json_dict):
     last_word = get_last_word(json_dict)
-    return make_fulfillment(get_best_word(last_word))
+    return make_fulfillment(get_best_word(get_rhyme_words(last_word)))
 
 
 def make_fulfillment(word):
